@@ -21,11 +21,20 @@ const App  = () => {
   } 
 
   return (
-    <div className="App" id='quote-box'>
-      <p id='text'>{quoteInfo.text}</p>
-      <span id='author'>{quoteInfo.author}</span>
-      <button id='new-quote' onClick={getQuote}>New Phrase</button>
-      <a href={'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + quoteInfo.text} id='tweet-quote' target='_blank' rel='noreferrer'>Share Tweet</a>
+    <div className="App"> 
+      <div id='quote-box'>
+        <p id='text'><i class="fa-solid fa-quote-left"></i> {quoteInfo.text}</p>
+        <span id='author'>- {quoteInfo.author}</span>
+        <ul>
+          <li>
+            <a href={'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + quoteInfo.text} id='tweet-quote' target='_blank' rel='noreferrer'><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <button id='new-quote' onClick={getQuote}>New quote</button>
+          </li>
+        </ul>
+      </div>
+      <p id='by'>by <a href='https://github.com/levymonteiro' id='github' target='_blank' rel='noreferrer'>Levy Monteiro</a></p>
     </div>
   );
 }

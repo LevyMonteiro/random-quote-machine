@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+a, button {
+    text-decoration: none;
+    border: none;
+    font-weight: 400;
+    color: white;
+    background-color: blueviolet;
+    display: inline-block;
+    justify-content: center;
+    font-size: 16px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+#by {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+#github {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#quote-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 550px;
+    padding: 50px;
+    color: blueviolet;
+    background-color: white;
+    border-radius: 4px;
+}
+
+#text, #author {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+#author {
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px;
+}
+
+#tweet-quote {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+#new-quote {
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+    margin-left: 290px;
+}
+
+/* fazer as media queries */
