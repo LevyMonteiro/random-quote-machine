@@ -19,7 +19,6 @@ a, button {
     border: none;
     font-weight: 400;
     color: white;
-    background-color: blueviolet;
     display: inline-block;
     justify-content: center;
     font-size: 16px;
@@ -29,6 +28,7 @@ ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    margin: 0;
 }
 
 li {
@@ -38,19 +38,25 @@ li {
 #by {
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    /* font-size: 14px; */
+    transform: scale(0.9);
 }
 
 #github {
     font-weight: 600;
-    font-size: 14px;
+    /* font-size: 14px; */
+    transform: scale(0.9);
 }
+
+#github:hover {
+    transform: scale(1.0);
+} 
 
 #quote-box {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 550px;
+    width: 650px;
     padding: 50px;
     color: blueviolet;
     background-color: white;
@@ -67,7 +73,7 @@ li {
     font-size: 16px;
     display: flex;
     justify-content: flex-end;
-    margin: 8px;
+    margin: 8px 0;
 }
 
 #tweet-quote {
@@ -82,7 +88,9 @@ li {
     width: 120px;
     height: 40px;
     border-radius: 4px;
-    margin-left: 290px;
+    margin-left: 390px;
 }
 
-/* fazer as media queries */
+/* 
+fazer as media queries 
+*/
