@@ -119,46 +119,21 @@ li {
 
     #text {
         font-size: 20px;
-        /* height: 75px; */
     } 
 
     #new-quote {
         width: 110px;
-        min-height: 30px;
+        height: 30px;
         font-size: 14px;
     }
 
     #tweet-quote {
         width: 30px;
-        min-height: 30px;
+        height: 30px;
         font-size: 14px;
     }
 
     #by, #github {
         font-size: 14px;
-    }
-    
+    }   
 }
-
-@media (max-width: 400px) {
-
-    #text {
-        font-size: 20px;
-    } 
-
-    #new-quote {
-        width: 110px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    #tweet-quote {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-    
-}
-/* 
-update readme
-*/
