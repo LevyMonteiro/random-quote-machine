@@ -28,8 +28,6 @@ This page has as reference the project of <a href="https://www.freecodecamp.org/
 </ul>
 
 ## Demo
-Check out a short video demonstrating the app in action:
+Click on the image to check out a short video demonstrating the app in action:
 
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/01acc62e-6557-4c77-8d9c-6d14e4ba9563" width="100%" height="100%" title="June 08, 2023 at 5:28 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
+[![Vídeo de demonstração](./img/thumbnail.png)](https://app.vidcast.io/share/embed/01acc62e-6557-4c77-8d9c-6d14e4ba9563)
