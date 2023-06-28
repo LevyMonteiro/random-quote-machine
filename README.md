@@ -6,8 +6,9 @@ To view the website, simply visit the live URL <a href="https://random-quote-mac
 
 If you'd like to run the website locally on your machine, you can do so by following these steps:
 <ol>
-<li>Clone the repository to your local machine using <strong>'git clone https://github.com/LevyMonteiro/random-quote-machine.git'</strong>.</li>
-<li>Open the index.html file in your preferred web browser.</li>
+<li>Clone the repository to your local machine using <code>git clone https://github.com/LevyMonteiro/random-quote-machine.git</code>.</li>
+<li>Change to directory using <code>cd random-machine-quote</code>.</li>
+<li>Run using <code>npm start</code></li>
 </ol>
 
 ## Built With
@@ -20,7 +21,8 @@ This website was built using the following technologies:
 </ul>
 
 ## Reference
-This page has as reference the project of <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp.<a>
+This page has as reference the project of <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp.<a></br>
+And using an <a href='https://api.quotable.io/random' target='_blank'>API</a> to generate the quotes.
 
 ## Author
 <ul>
