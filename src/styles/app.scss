@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+:root {
+    --color: $ffffff; //initial color
+}
+
+@mixin color() {
+    background-color: var(--color);
+}
+
+@mixin btn() {
+    text-decoration: none;
+    border: none;
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+  }
+
+.App {
+    @include color;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.footer {
+    color: white;
+    transform: scale(0.9);
+    text-shadow: 2px 2px 2px black;
+
+    .github {
+        @include btn;
+    
+        font-weight: 600;
+        transform: scale(0.9);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.699) ;
+    
+        &:hover {
+            transform: scale(1.0);
+        }
+    }
+}
+
+.quote-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 650px;
+    padding: 50px;
+    background-color: white;
+    color: var(--color);
+    border-radius: 4px;
+
+    .text {
+        font-weight: 500;
+        font-size: 1.9rem;
+    }
+    
+    .author {
+        font-size: 1rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: flex-end;
+        margin: 8px 0;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+    }
+    
+    .tweet-quote {
+        @include btn;
+        @include color;
+
+    
+        width: 40px;
+        height: 40px;
+        display: flex;
+    
+        &:first-child{
+            font-size: 20px;
+        }
+    }
+    
+    .new-quote {
+        @include btn;
+        @include color;
+
+    
+        width: 120px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .quote-box {
+        width: 85vw;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .quote-box {
+        padding: 25px;
+        
+        .text {
+            font-size: 20px;
+        } 
+    
+        .new-quote {
+            width: 110px;
+            height: 30px;
+            font-size: 14px;
+        }
+    
+        .tweet-quote {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            
+            &:first-child {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .footer, .github {
+        font-size: 14px;
+    }   
+}

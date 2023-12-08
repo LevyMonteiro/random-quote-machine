@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import './styles/app.css';
 
 const App  = () => {
 
-  const [quoteInfo, setQuoteInfo] = useState({})
+  const [quoteInfo, setQuoteInfo] = useState({});
+  const [previousColor, setPreviousColor] = useState('');
     
   useEffect(() => {
     getQuote()
   }, [])
-
-  const [backgroundColor, setBackgroundColor] = useState('#ffffff'); // Cor inicial do background
 
   const getQuote = () => {
     //fetch quote on api
@@ -37,25 +36,61 @@ const App  = () => {
       '#77B1A9',
       '#73A857'
     ];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    setBackgroundColor(randomColor);
+
+
+    const availableColors = colors.filter(color => color !== previousColor);
+    const randomColor = availableColors[Math.floor(Math.random() * availableColors.length)];
+    setPreviousColor(randomColor);
+
+    document.documentElement.style.setProperty('--color', randomColor);
   };
 
   return (
-    <div className="App" style={{backgroundColor}}> 
-      <div id='quote-box' style={{color: backgroundColor}}>
-        <p id='text'><i class="fa-solid fa-quote-left"></i> {quoteInfo.text}</p>
-        <span id='author'>- {quoteInfo.author}</span>
+    <div className="App"> 
+      <div class='quote-box'>
+
+        <p class='text'>
+          <i class="fa-solid fa-quote-left"></i> 
+          {' ' + quoteInfo.text}
+        </p>
+
+        <span class='author'>{quoteInfo.author}</span>
+
         <ul>
           <li>
-            <a style={{backgroundColor}} href={'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + quoteInfo.text} id='tweet-quote' target='_blank' rel='noreferrer'><i class="fa-brands fa-twitter"></i></a>
+            <a 
+              tabIndex={1}
+              class='tweet-quote' 
+              target='_blank' 
+              rel='noreferrer'
+              href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text= ${quoteInfo.text}  - ${quoteInfo.author}`}>
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
           </li>
+
           <li>
-            <button style={{backgroundColor}} id='new-quote' onClick={getQuote}>New quote</button>
+            <button 
+            tabIndex={2}
+            class='new-quote' 
+            onClick={getQuote}>
+              New quote
+            </button>
           </li>
         </ul>
+        
       </div>
-      <p id='by'>by<a href='https://github.com/levymonteiro' id='github' target='_blank' rel='noreferrer'>Levy Monteiro</a></p>
+
+      <p class='footer'>
+        coded by
+        <a 
+          tabIndex={3}
+          href='https://github.com/levymonteiro' 
+          class='github' 
+          target='_blank' 
+          rel='noreferrer'>
+            Levy Monteiro
+        </a>
+      </p>
     </div>
   );
 }
